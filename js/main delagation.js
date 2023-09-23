@@ -86,15 +86,14 @@ function initCellElementList(){
     const liList = getCellElementList();
     liList.forEach((cell,index)=> {
         // cell.addEventListener("click",()=> HandleCellClick(cell,index));
-        cell.datatset.idx = index;
+        cell.dataset.idx = index;
     })
 
     const ULList = getUL();
     if (ULList){
         ULList.addEventListener('click',(event)=>{
             if (event.target.tagName !== "LI") return
-            const index = Number.parseInt(event.target.datatset.idx);
-            console.log('idx',event.target,idx);
+            const index = Number.parseInt(event.target.dataset.idx);
             HandleCellClick(event.target,index);
         })
     }
