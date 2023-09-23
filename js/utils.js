@@ -61,7 +61,7 @@ export function checkGameStatus(cellValues) {
     const second = cellValues[set[1]];
     const third = cellValues[set[2]];
 
-    return first === "" && first === second && second === third;
+    return first !== "" && first === second && second === third;
   })
 
   if(winSetIndex >= 0) {
